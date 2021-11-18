@@ -1,5 +1,14 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+.html {
+  font-size: 62.5%;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +16,90 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* -------HEADER------- */
+
+.header__container {
+  max-height: 12.5rem;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 13rem;
 }
+
+/* SEARCH */
+.search__container {
+  width: 25rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.search {
+  width: 100% ;
+  background-color:#e5e5e9;
+  border-radius: 10rem;
+}
+.search__input {
+  width: 100%;
+display: block;
+padding: 1.2rem;
+background: transparent;
+border: none;
+font-size: 1.2rem;
+outline: none;
+height: 2.5rem;
+}
+.search__input::placeholder {
+  font-size: 1rem;
+}
+
+  /* MENU */
+.header__list {
+  display: flex;
+}
+.header__item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.header__link img {
+  display: block;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  
+}
+/* ICONS */
+.icons__list {
+  display: flex;
+}
+
+.icons__item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.icons__link img {
+  display: block;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  
+}
+
+
+/* -------SIDEBAR------- */
+.sidebar {
+  position: relative;
+  height: 20px;
+max-width: 13rem;
+
+}
+/* LOGO */
+.logo__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: calc(90px + 6px);
+  transform: translateY(-10rem);
+  max-width: 13rem;
+  max-width: 10rem;
+}
+
+
