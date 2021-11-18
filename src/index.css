@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  text-decoration: none;
 }
 .html {
   font-size: 62.5%;
@@ -63,9 +64,15 @@ height: 2.5rem;
 }
 .header__link img {
   display: block;
-  max-width: 2.5rem;
-  max-height: 2.5rem;
-  
+  max-width: 3rem;
+  max-height: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.header__link img:hover {
+background: transparent;
+transition-duration: 1s;
+transform: scale(1.1);
 }
 /* ICONS */
 .icons__list {
@@ -85,21 +92,56 @@ height: 2.5rem;
 
 
 /* -------SIDEBAR------- */
-.sidebar {
-  position: relative;
-  height: 20px;
-max-width: 13rem;
+.sidebar__wrapper {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0.7rem 0; 
+max-width: 17rem;
 
 }
+
 /* LOGO */
 .logo__img {
   position: absolute;
   left: 0;
   top: 0;
-  padding-top: calc(90px + 6px);
-  transform: translateY(-10rem);
+  transform: translateY(-4rem);
   max-width: 13rem;
   max-width: 10rem;
+  
+}
+.logo_wrapper {
+  position: relative;
+
 }
 
+/* FEEDS */ /* MORE PAGES */
+.feeds {
+  margin-bottom: 1.3rem;
+}
+.feeds, .morepages {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+}
+.feeds__title, .morepages__title{
+  margin-bottom: 1rem;
+  font-size: 0.9em;
+}
+.feeds__item, .morepages__item {
+  margin-bottom: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+.feeds__item img, .morepages__item img{
+  width: 3rem;
+  height: 3rem;
+}
+.feeds__link, .morepages__link {
+  color: #6a6a6a;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-left: 1rem;
+}
 
