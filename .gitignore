@@ -7,8 +7,7 @@
 
 # testing
 /coverage
-/src/Header/
-/src/SideBar.jsx/
+
 
 # production
 /build
