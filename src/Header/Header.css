@@ -1,14 +1,17 @@
 /* -------HEADER------- */
-/* LOGO */
-.logo__img {
 
-  max-width: 13rem;
-  max-width: 10rem;
-  
+.header {
+height: 7.7rem;
+max-height: 10rem;
+border-bottom: solid 1px black;
+z-index: 10;
+}
+.logo__img {
+max-width: 17rem;
+
 }
 .header__container {
-  max-height: 12.5rem;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,9 +21,7 @@
 
 /* SEARCH */
 .search__container {
-  width: 25rem;
-  display: flex;
-  justify-content: flex-start;
+  width: 30rem;
 }
 .search {
   width: 100% ;
@@ -30,15 +31,15 @@
 .search__input {
   width: 100%;
 display: block;
-padding: 1.2rem;
+padding: 1.5rem 2rem;
 background: transparent;
 border: none;
-font-size: 1.2rem;
 outline: none;
-height: 2.5rem;
 }
+
+
 .search__input::placeholder {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 /* MENU */
@@ -51,10 +52,8 @@ height: 2.5rem;
 }
 .header__link img {
   display: block;
-  max-width: 3rem;
-  max-height: 3rem;
-  height: 2.5rem;
-  width: 2.5rem;
+  max-width: 3.5rem;
+  max-height: 3.5rem;
 }
 .header__link img:hover {
 background: transparent;
@@ -71,7 +70,7 @@ transform: scale(1.1);
 }
 .icons__link img {
   display: block;
-  max-width: 2.5rem;
-  max-height: 2.5rem;
+  max-width: 3.5rem;
+  max-height: 3.5rem;
   
 }
