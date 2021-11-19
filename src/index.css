@@ -17,7 +17,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.page {
+  height: 200vh;
+}
 /* -------HEADER------- */
 
 .header__container {
@@ -26,7 +28,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 13rem;
+  position: fixed;
+  width: 100%;
+
 }
 
 /* SEARCH */
@@ -95,25 +99,22 @@ transform: scale(1.1);
 .sidebar__wrapper {
   background-color: #f9f9f9;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 0.5rem 0.7rem 0; 
 max-width: 17rem;
+overflow-y: scroll;
+z-index: 10;
+position: fixed;
+margin-top: 5rem;
 
 }
 
 /* LOGO */
 .logo__img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(-4rem);
+
   max-width: 13rem;
   max-width: 10rem;
   
-}
-.logo_wrapper {
-  position: relative;
-
 }
 
 /* FEEDS */ /* MORE PAGES */
@@ -128,6 +129,8 @@ max-width: 17rem;
 .feeds__title, .morepages__title{
   margin-bottom: 1rem;
   font-size: 0.9em;
+  opacity: 30%;
+  font-weight: 500;
 }
 .feeds__item, .morepages__item {
   margin-bottom: 1.3rem;
@@ -143,5 +146,9 @@ max-width: 17rem;
   font-weight: 600;
   letter-spacing: 0.4px;
   margin-left: 1rem;
+
+}
+.feeds__link:hover, .morepages__link:hover {
+ color: #A66B00; 
 }
 
