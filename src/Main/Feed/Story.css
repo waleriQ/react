@@ -1,5 +1,48 @@
-.story {
-  margin-left: 17rem;
-  padding: 0rem 3rem;
+.stories_wrapper {
+  width: 88rem;
+  margin-left: 23rem;
+  padding: 5rem 5rem;
   z-index: 1;
+  margin: 0 auto;
+ 
+}
+.stories {
+  display: grid;
+  grid-template-columns: repeat(5, 14.55rem);
+  grid-template-rows: 22rem;
+  grid-column-gap: 1.3rem;
+ 
+}
+.stories__item {
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+
+}
+.stories__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.stories__avatar {
+  display: block;
+position: absolute;
+bottom: 0;
+right: 0;
+height: 50px;
+width: 50px;
+
+
+
+}
+.stories__avatar img {
+  z-index: 2;
+  border-radius: 10rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
 }
