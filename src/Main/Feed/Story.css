@@ -1,17 +1,17 @@
 .stories_wrapper {
   width: 88rem;
-  padding: 5rem 0rem;
   margin: 0 auto;
   height: 100%;
  
+
 }
 .stories {
   display: grid;
   grid-template-columns: repeat(5, 14.55rem);
   grid-template-rows: 22rem;
   grid-column-gap: 1.3rem;
-  margin-top: 4rem;
- 
+  margin-top: 10rem;
+  justify-content: center;
 }
 .stories__item {
   border-radius: 1rem;

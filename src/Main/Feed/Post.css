@@ -1,5 +1,6 @@
 .post_wrapper {
   background-color: white;
+  margin-top: 2.5rem;
 }
 .create__post {
   display: flex;

@@ -6,8 +6,9 @@
   height: 100%;
   padding: 1rem 1rem 6rem; 
 max-width: 25rem;
-overflow-y: scroll;
-position: fixed;
+position: absolute;
+right: 0;
+top: 0;
 margin-top: 7.5rem;
 }
 
@@ -45,4 +46,5 @@ margin-top: 7.5rem;
  .navblock__link:hover {
  color: #A66B00; 
 }
+
 
