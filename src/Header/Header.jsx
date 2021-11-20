@@ -6,11 +6,11 @@ let Header = () => {
     <header className="header" >
       
       <div className="header__container">
-      <div className="logo_wrapper">
+    
   <div className="logo">
 <a href=""><img className="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/1280px-Slack_Technologies_Logo.svg.png" alt="" /></a>
    </div>
-  </div>
+ 
         <div className="search__container">
           <form className="search" method="post" >
             <input className="search__input" placeholder="Start typing to text..." type='text' />

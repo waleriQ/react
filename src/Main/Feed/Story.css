@@ -1,9 +1,8 @@
 .stories_wrapper {
   width: 88rem;
-  margin-left: 23rem;
   padding: 5rem 5rem;
-  z-index: 1;
   margin: 0 auto;
+  height: 100%;
  
 }
 .stories {
@@ -11,6 +10,7 @@
   grid-template-columns: repeat(5, 14.55rem);
   grid-template-rows: 22rem;
   grid-column-gap: 1.3rem;
+  margin-top: 4rem;
  
 }
 .stories__item {
