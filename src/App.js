@@ -1,14 +1,14 @@
 import './App.css';
 import Header from './Header/Header';
 import SideBar from './SideBar/SideBar';
-import Story from './Main/Feed/Story';
+import Main from './Main/Main';
 
 let App = () => {
   return (
     <div className="page">
     <Header/>
     <SideBar />
-    <Story/>
+    <Main/>
    
     </div>
 
