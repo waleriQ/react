@@ -12,7 +12,7 @@ return (
   <ul className={sm.navblock__list}>
     <li className={sm.navblock__item}>
       <img className={sm.navblock__img} src="https://cdn-icons-png.flaticon.com/512/237/237014.png" alt="" />
-      <a className={sm.navblock__link} href="">Newsfeed</a>
+      <a className={sm.navblock__link} href="/feeds">Newsfeed</a>
     </li>
     <li className={sm.navblock__item}>
       <img className={sm.navblock__img} src="https://cdn-icons-png.flaticon.com/512/1378/1378577.png" alt="" />
@@ -28,7 +28,7 @@ return (
     </li>
     <li className={sm.navblock__item}>
       <img className={sm.navblock__img} src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1637265457~hmac=3ec427ba3060610cace77bf34a226144" alt="" />
-      <a className={sm.navblock__link} href="">Author Profile</a>
+      <a className={sm.navblock__link} href="/profile">Author Profile</a>
     </li>
   </ul>
   </div>
