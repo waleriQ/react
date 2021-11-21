@@ -10,7 +10,6 @@
   grid-template-columns: repeat(5, 14.55rem);
   grid-template-rows: 22rem;
   grid-column-gap: 1.3rem;
-  margin-top: 10rem;
   justify-content: center;
 }
 .stories__item {
