@@ -34,9 +34,9 @@ let Header = () => {
                 </a>
               </li>
               <li className="header__item">
-                <a href="" className="header__link">
+                <Link to="/friends" className="header__link">
                   <img src="/images/user-group.svg" alt="friends" />
-                </a>
+                </Link>
               </li>
               <li className="header__item">
                 <a href="" className="header__link">

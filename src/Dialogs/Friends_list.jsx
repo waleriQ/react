@@ -1,57 +1,53 @@
 import React from 'react';
-import './Dialogs.css';
+import './Friends_list.css';
 import {Link} from 'react-router-dom';
 
-const MessageLeft = (props) =>{
+
+let User = (props) => {
 return (
-<div className="message__left">
-<div className="dialogs__wrapper">
-  <img className="dialogs__avatar" src={props.img} alt="" />
-  <ul className="dialogs__item">
-    <li className="dialogs__name">{props.name} </li>
-    <time className="dialogs__time" datatime={props.time}>{props.time}</time>
+  <div className="user">
+  <div className="avatar">
+    <a href="">
+      <img src={props.img} alt="user photo" />
+    </a>
+  </div>
+  <ul className="user_list">
+    <li className="user_name">
+      <a href="">{props.name}</a>
+    </li>
+    <li className="user_job">
+      {props.job}
+    </li>
+  <li className="user_message">
+    <Link to={props.link + props.id}>Writing user</Link>
+  </li>
   </ul>
 </div>
-<div className="message">
-  <p>{props.message}</p>
-</div>  {/* POSITION LEFT */}
-</div>
 )
 };
-
-const MessageRight = (props) =>{
+let Friends_list = (props) => {
   return (
-  <div className="message__left">
-  <div className="dialogs__wrapper dialogs__wrapper_right">
-    <img className="dialogs__avatar" src={props.img} alt="" />
-    <ul className="dialogs__item">
-      <li className="dialogs__name">{props.name} </li>
-      <time className="dialogs__time" datatime={props.time}>{props.time}</time>
-    </ul>
-  </div>
-  <div className="message message_right">
-    <p>{props.message}</p>
-  </div> {/* POSITION RIGHT */}
-  </div>
+    <div className="friends">
+      <div className="search_friends">
+        <form className="form_search_friend" action="" method="post">
+          <input className="input_search_friend" src="./images/search.svg" type="text" placeholder="Search your friend..." />
+        </form>
+        <div className="parametrs">
+          <p><a href="">Параметры</a></p>
+        </div>
+      </div>
+
+<User name="Alex Mitchel" link="/dialogs/1 " id="1" job="Front-end devevoper" img="https://likeyou.io/wp-content/uploads/2019/07/TiOa5ytjq-k.jpg" />
+<User name="Dorian Gray" link="/dialogs/2" id="2" job="Actor" img="https://www.film.ru/sites/default/files/styles/thumb_600x680/public/articles/1452017-1173790.jpg" />
+<User name="Antony Smith" link="/dialogs/3" id="3" job="Doctor" img="https://top10a.ru/wp-content/uploads/2019/09/10-82.jpg" />
+<User name="Mattew Andruwson" link="/dialogs/4" id="4" job="Fireman" img="https://st2.depositphotos.com/1001959/11727/i/950/depositphotos_117270814-stock-photo-firefighter-in-oxygen-mask.jpg" />
+<User name="Alex Mitchel" link="/dialogs/5" id="5" job="Front-end devevoper" img="https://likeyou.io/wp-content/uploads/2019/07/TiOa5ytjq-k.jpg" />
+<User name="Dorian Gray" link="/dialogs/6" id="6" job="Actor" img="https://www.film.ru/sites/default/files/styles/thumb_600x680/public/articles/1452017-1173790.jpg" />
+<User name="Antony Smith" link="/dialogs/7" id="7" job="Doctor" img="https://top10a.ru/wp-content/uploads/2019/09/10-82.jpg" />
+<User name="Mattew Andruwson" link="/dialogs/8" id="8" job="Fireman" img="https://st2.depositphotos.com/1001959/11727/i/950/depositphotos_117270814-stock-photo-firefighter-in-oxygen-mask.jpg" />
+
+    </div>
   )
-  };
-
-
-
-let Dialogs = (props) => {
-return (
-<div className="dialogs">
-
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="I'am fine how are you?" />
-<MessageRight name="Olivia Williams" img="/images/woman.jpeg" time="02:38 PM" message="Oscar Wilde’s plays are famous for their witty dialogue." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="We have held a number of meetings, and the dialogue is ongoing." />
-<MessageRight name="Olivia Williams" img="/images/woman.jpeg" time="02:38 PM" message="Oscar Wilde’s plays are famous for their witty dialogue." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="Information dialogues as communicative action in relation to partner modelling and information processing." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="Issues relating to authenticity of dialogues are complex and have been hotly debated." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="Ill-structured problems tend to produce ' dialogues of the deaf' that can defy resolution for long periods." />
-<MessageRight name="Olivia Williams" img="/images/woman.jpeg" time="02:38 PM" message="In such contexts, dialogues on appropriation, inequalities of power, the user and ^ the used are irrelevant.." />
-</div>
-)
 };
-export default Dialogs;
+export default Friends_list;
 

@@ -1,10 +1,7 @@
 .dialogs {
   width: 100%;
- margin-left: 24rem;
- margin-right: 24rem;
+
   overflow: auto;
-  padding-top: 10rem;
-  background-color: white;
 overflow-x: scroll;
   
 }
