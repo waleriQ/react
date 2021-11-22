@@ -76,7 +76,16 @@ transform: scale(1.1);
 }
 .icons__link img {
   display: block;
-  max-width: 3.5rem;
-  max-height: 3.5rem;
+  max-width: 4rem;
+  max-height: 4rem;
+
   
+}
+.icons__link_profile img {
+display: block;
+width: 4rem;
+height: 4rem;
+border-radius: 2rem;
+object-fit: cover;
+display: block;
 }

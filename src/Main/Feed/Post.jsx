@@ -1,6 +1,18 @@
 import React from 'react';
 import './Post.css';
-let Post = () => {
+import {Link} from 'react-router-dom';
+
+const Postitem = (props) => {
+  return (
+    <div className="post__information">
+    <a href=""><img src={props.img} alt="" /></a>
+    <Link to="/livevideo/"><p>{props.name}</p></Link>
+  </div>
+  )
+  };
+
+  
+let Post = (props) => {
 return (
   <div className="post_wrapper">
   <div className="create__post">
@@ -19,21 +31,13 @@ return (
         <textarea className="post__textarea" placeholder='Whats on your mind...'></textarea>
       </form>
     </div>
-    <div className="post__icons">
-      <div className="post__information">
-        <a href=""><img src="https://cdn-icons.flaticon.com/png/512/4049/premium/4049958.png?token=exp=1637434167~hmac=ff35dad659f2e614d337e691b79a21bf" alt="" /></a>
-        <a href=""><p>Live Video</p></a>
-      </div>
-     
-      <div className="post__information">
-        <a href=""><img src="https://cdn-icons.flaticon.com/png/512/5204/premium/5204343.png?token=exp=1637434190~hmac=af0b5ac0e9ad469a59e2b4bb04573737" alt="" /></a>
-        <a href=""><p>Photo/Video</p></a>
-      </div>
 
-      <div className="post__information">
-        <a href=""><img src="https://cdn-icons-png.flaticon.com/512/2455/2455125.png" alt="" /></a>
-        <a  href=""><p>Feeling/Activity</p></a>
-      </div>
+
+    <div className="post__icons">
+    <Postitem name="Live Video" img="/images/stream.png"/>
+    <Postitem name="Photo/Video" img="/images/photograph.png"/>
+    <Postitem name="Feeling/Activity" img="/images/happy.png"/>
+
 
    
 

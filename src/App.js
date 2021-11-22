@@ -4,6 +4,7 @@ import SideBar from './SideBar/SideBar';
 import Main from './Main/Main';
 import Profile from './Profile/Profile';
 import {BrowserRouter, Routes, Route, Link,} from 'react-router-dom';
+import Dialogs from './Dialogs/Dialogs';
 
 let App = () => {
   return (
@@ -13,6 +14,7 @@ let App = () => {
       <Routes>
         <Route path='/feeds' element={<Main />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/dialogs' element={<Dialogs />} />
         {/* <Route path='*' element={<Notfoundpage/>} /> */}
       </Routes>
     </div>

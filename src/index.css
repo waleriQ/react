@@ -18,8 +18,8 @@ body {
 }
 
 .page {
-  height: 200vh;
   background-color: #f9f9f9;
+  overflow: hidden;
 }
 
 

@@ -1,16 +1,14 @@
 import React from 'react';
 import './Header.css';
+import {Link} from 'react-router-dom';
 
 let Header = () => {
   return (
     <header className="header" >
-      
       <div className="header__container">
-    
   <div className="logo">
 <a href=""><img className="logo__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/1280px-Slack_Technologies_Logo.svg.png" alt="" /></a>
    </div>
- 
         <div className="search__container">
           <form className="search" method="post" >
             <input className="search__input" placeholder="Start typing to text..." type='text' />
@@ -21,28 +19,28 @@ let Header = () => {
           <div className="header__menu">
             <ul className="header__list">
               <li className="header__item">
+                <Link to="/feeds" className="header__link">
+                  <img src="/images/home.svg" alt="home" />
+                </Link>
+              </li>
+              <li className="header__item">
                 <a href="" className="header__link">
-                  <img src="https://cdn-icons-png.flaticon.com/512/263/263115.png" alt="" />
+                  <img src="/images/move.svg" alt="move" />
                 </a>
               </li>
               <li className="header__item">
                 <a href="" className="header__link">
-                  <img src="https://cdn-icons.flaticon.com/png/512/5668/premium/5668021.png?token=exp=1637256686~hmac=4384e2a6864e3ad5cd81733384852dd1" alt="" />
+                  <img src="/images/photo-group.svg" alt="stories" />
                 </a>
               </li>
               <li className="header__item">
                 <a href="" className="header__link">
-                  <img src="https://cdn-icons.flaticon.com/png/512/1666/premium/1666744.png?token=exp=1637256739~hmac=ab54b3205de17489405bab19a5a5fad1" alt="" />
+                  <img src="/images/user-group.svg" alt="friends" />
                 </a>
               </li>
               <li className="header__item">
                 <a href="" className="header__link">
-                  <img src="https://cdn-icons-png.flaticon.com/512/681/681443.png" alt="" />
-                </a>
-              </li>
-              <li className="header__item">
-                <a href="" className="header__link">
-                  <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="" />
+                  <img src="/images/shopping-bag.svg" alt="shopping" />
                 </a>
               </li>
             </ul>
@@ -53,23 +51,23 @@ let Header = () => {
             <ul className="icons__list">
               <li className="icons__item">
                 <a href="" className="icons__link">
-                  <img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png" alt="" />
+                  <img src="/images/bell.svg" alt="bell" />
                 </a>
               </li>
               <li className="icons__item">
-                <a href="" className="icons__link">
-                  <img src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059975.png?token=exp=1637259541~hmac=49475261ad13859143ef1c2ff06599a4" alt="" />
-                </a>
+                <Link to="/dialogs" className="icons__link">
+                  <img src="/images/conversation.svg" alt="conversation" />
+                </Link>
               </li>
               <li className="icons__item">
                 <a href="" className="icons__link">
-                  <img src="https://cdn-icons-png.flaticon.com/512/2230/2230277.png" alt="" />
+                  <img src="/images/brightness-medium.svg" alt="brightness" />
                 </a>
               </li>
               <li className="icons__item">
-                <a href="" className="icons__link">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="" />
-                </a>
+                <Link to="/profile" className="icons__link icons__link_profile">
+                  <img src="/images/man.jpeg" alt="profile" />
+                </Link>
               </li>
             </ul>
           </div>
