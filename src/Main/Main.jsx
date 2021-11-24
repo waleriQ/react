@@ -4,12 +4,12 @@ import Story from './Feed/Story';
 import Post from './Feed/Post';
 import Rightbar from './Feed/Rightbar';
 
-let Main = () => {
+let Main = (props) => {
   return (
      <div className="main">
        <Story />
        <Post/>
-       <Rightbar/>
+       <Rightbar FriendsRequestData={props.FriendsRequestData}/>
      </div>
 
   );

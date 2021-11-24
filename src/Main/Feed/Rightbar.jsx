@@ -2,17 +2,13 @@
 import React from 'react';
 import rb from './Rightbar.module.css';
 import {Link} from 'react-router-dom';
-let Rightbar = () => {
+let Rightbar = (props) => {
 
 
   let FriendsRequest = (props) => {
 return (
-  <div className={rb.navblock}>
-  <div className={rb.navblock__title}>
-    <p>{props.title}</p>
-    <span><Link to="/friends">See all</Link></span>
-  </div>
-
+ 
+<>
   <div className={rb.rightbar_request}>
     <div className={rb.navblock_avatar}>
       <img src={props.img} alt="avatar" />
@@ -30,17 +26,13 @@ return (
       <button className={rb.btn__blue}>Confirm</button>
       <button className={rb.btn__gray}>Delete</button>
     </form>
-</div>
+</>
 )
   };
 
-  let FriendsRequestData =  [
-{title: 'Friends Request', name: 'Antony Daugloy', mutual: '12', img: 'https://bugaga.ru/uploads/posts/2016-07/1469432833_mister-world-3.jpg'},
-{title: 'Friends Request', name: 'Glorya Mitchel', mutual: '4', img: 'https://miro.medium.com/max/9216/0*KEs-jZkVHlcbBEuY'},
-{title: 'Friends Request', name: 'Ivelina Campbell', mutual: '2', img: 'https://miro.medium.com/max/1200/1*LPPpUZLved9uY_9gvRgRlw.jpeg'},
-  ]
 
-  let FriendsElements = FriendsRequestData.map (friendRequestMassive => {
+
+  let FriendsElements = props.FriendsRequestData.map (friendRequestMassive => {
     return (
       <FriendsRequest
        title={friendRequestMassive.title} 
@@ -49,14 +41,20 @@ return (
       img={friendRequestMassive.img}/>
     )
   })
+  
 return (
 
   <aside className={rb.aside} >
     <div className={rb.sidebar__wrapper}>
-
+    <div className={rb.navblock}>
+  <div className={rb.navblock__title}>
+    <p>Friends Request</p>
+    <span><Link to="/friends">See all</Link></span>
+  </div>
 {
   FriendsElements
 }
+</div>
       <div className={rb.navblock}>
         <div className={rb.navblock__title}>
           <p>Confirm Request</p>

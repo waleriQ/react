@@ -8,17 +8,18 @@ import Dialogs from './Dialogs/Dialogs';
 import Friends_list from './Dialogs/Friends_list';
 
 
-let App = () => {
+
+let App = (props) => {
   return (
     <div className="page">
       <Header />
       <SideBar />
       <div className="wrapper_page">
       <Routes>
-        <Route path='/feeds' element={<Main />} />
+        <Route path='/feeds' element={<Main FriendsRequestData={props.FriendsRequestData}/>} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/dialogs' element={<Dialogs />} />
-        <Route path='/friends' element={<Friends_list />} />
+        <Route path='/friends' element={<Friends_list userData={props.userData} />} />
         {/* <Route path='*' element={<Notfoundpage/>} /> */}
       </Routes>
       </div>
