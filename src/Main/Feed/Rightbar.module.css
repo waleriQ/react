@@ -1,5 +1,6 @@
 /* -------SIDEBAR------- */
 
+
 .sidebar__wrapper {
   background-color: #f9f9f9;
   width: 100%;
@@ -10,6 +11,7 @@ position: absolute;
 right: 0;
 top: 0;
 margin-top: 7.5rem;
+margin-right: .5rem;
 }
 
 /* NAVBLOCK */ 
@@ -18,33 +20,90 @@ margin-top: 7.5rem;
   border-radius: 1rem;
   padding: 0.8rem 1rem;
   margin-bottom: 1.3rem;
+ 
 }
  .navblock__title{
   margin-bottom: 1rem;
   font-size: 1.2em;
-  opacity: 30%;
-  font-weight: 500;
-}
-.navblock__item {
-  margin-bottom: 1.3rem;
+  font-weight: 600;
+  color: black;
   display: flex;
+  justify-content: space-between;
+}
+.navblock__title span a{
+ color:  blue;
+  text-decoration: none;
+  
+}
+.navblock__title span:active {
+  color: blue;
+}
+
+.rightbar_request {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
-.navblock__img {
-  width: 4.5rem;
-  height: 4.5rem;
+.rightbar_request_confirm {
+  margin-top: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
 }
+.navblock_avatar img{
+display: block;
+width: 7rem;
+height: 7rem;
+object-fit: cover;
+border-radius: 5rem;
+}
+.nablock_avatar_confirm img{
+  width: 5rem;
+height: 5rem;
+display: block;
+object-fit: cover;
+border-radius: 5rem;
 
-.navblock__link {
-  color: #6a6a6a;
+}
+.rightbar_name {
+  margin-top: .2rem;
+}
+.rightbar_name a {
+
+  color:  black;
+}
+.rightbar_name p {
+  font-size: 1.4rem;
+  color:  black;
   font-weight: 600;
-  letter-spacing: 0.4px;
-  margin-left: 1rem;
-  font-size: 1.3rem;
-
 }
- .navblock__link:hover {
- color: #A66B00; 
+.rightbar_name span { 
+font-size: 1.2rem;
+color: black;
+opacity: 40%;
 }
-
-
+.btn {
+margin-top: 2rem;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.btn__blue {
+  background-color: #185DD6;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 5rem;
+  color:  white;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn__gray {
+  background-color: #eee;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}

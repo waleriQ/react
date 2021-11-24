@@ -7,6 +7,7 @@ import {BrowserRouter, Routes, Route, Link,} from 'react-router-dom';
 import Dialogs from './Dialogs/Dialogs';
 import Friends_list from './Dialogs/Friends_list';
 
+
 let App = () => {
   return (
     <div className="page">

@@ -1,81 +1,109 @@
 
 import React from 'react';
 import rb from './Rightbar.module.css';
+import {Link} from 'react-router-dom';
 let Rightbar = () => {
+
+
+  let FriendsRequest = (props) => {
 return (
-  
-<aside className={rb.aside} >
-<div className={rb.sidebar__wrapper}>
-  <div className={rb.navblock}> 
+  <div className={rb.navblock}>
   <div className={rb.navblock__title}>
-    <p>New Feeds</p>
+    <p>{props.title}</p>
+    <span><Link to="/friends">See all</Link></span>
   </div>
-  <ul className={rb.navblock__list}>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons-png.flaticon.com/512/237/237014.png" alt="" />
-      <a className={rb.navblock__link} href="">Newsfeed</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons-png.flaticon.com/512/1378/1378577.png" alt="" />
-      <a className={rb.navblock__link} href="">Badges</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons.flaticon.com/png/512/303/premium/303615.png?token=exp=1637265358~hmac=5d2d901b7a12b74113fb20c4a1cd5654" alt="" />
-      <a className={rb.navblock__link} href="">Explore Stories</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="" />
-      <a className={rb.navblock__link} href="">Popular Group</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1637265457~hmac=3ec427ba3060610cace77bf34a226144" alt="" />
-      <a className={rb.navblock__link} href="">Author Profile</a>
-    </li>
-  </ul>
+
+  <div className={rb.rightbar_request}>
+    <div className={rb.navblock_avatar}>
+      <img src={props.img} alt="avatar" />
+    </div>
+    <ul className={rb.rightbar_list}>
+      <li className={rb.rightbar_name}>
+        <p><Link to="">{props.name}</Link></p>
+      </li>
+      <li className={rb.rightbar_name}>
+      <span>{props.mutual}mutual friends</span>
+      </li>
+    </ul>
   </div>
-  <div className={rb.navblock}> 
-  <div className={rb.navblock__title}>
-    <p>More Pages</p>
-  </div>
-  <ul className={rb.navblock__list}>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons-png.flaticon.com/512/6011/6011130.png" alt="" />
-      <a className={rb.navblock__link} href="">Email Box</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons.flaticon.com/png/512/1621/premium/1621088.png?token=exp=1637266535~hmac=a3550a1b3505bfcf6e70793788cf72dd" alt="" />
-      <a className={rb.navblock__link} href="">Near Hotel</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons.flaticon.com/png/512/4725/premium/4725482.png?token=exp=1637266572~hmac=56219fe1a256be1084c5e45a50514545" alt="" />
-      <a className={rb.navblock__link} href="">Latest Event</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons-png.flaticon.com/512/3781/3781721.png" alt="" />
-      <a className={rb.navblock__link} href="">Live Stream</a>
-    </li>
-  </ul>
-  </div>
-  <div className={rb.navblock}> 
-  <div className={rb.navblock__title}>
-    <p>Account</p>
-  </div>
-  <ul className={rb.navblock__list}>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons.flaticon.com/png/512/5561/premium/5561749.png?token=exp=1637343016~hmac=63dad4ee78c8c3ec7e9b465716386f83" alt="" />
-      <a className={rb.navblock__link} href="">Settings</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons-png.flaticon.com/512/3314/3314553.png" alt="" />
-      <a className={rb.navblock__link} href="">Analytics</a>
-    </li>
-    <li className={rb.navblock__item}>
-      <img className={rb.navblock__img} src="https://cdn-icons.flaticon.com/png/512/5356/premium/5356263.png?token=exp=1637343109~hmac=4377e40d89e99630b7dcdd641059b5a8" alt="" />
-      <a className={rb.navblock__link} href="">Chat</a>
-    </li>
-  </ul>
-  </div>
-  
+  <form action="/" method="post" className={rb.btn}>
+      <button className={rb.btn__blue}>Confirm</button>
+      <button className={rb.btn__gray}>Delete</button>
+    </form>
+</div>
+)
+  };
+
+  let FriendsRequestData =  [
+{title: 'Friends Request', name: 'Antony Daugloy', mutual: '12', img: 'https://bugaga.ru/uploads/posts/2016-07/1469432833_mister-world-3.jpg'},
+{title: 'Friends Request', name: 'Glorya Mitchel', mutual: '4', img: 'https://miro.medium.com/max/9216/0*KEs-jZkVHlcbBEuY'},
+{title: 'Friends Request', name: 'Ivelina Campbell', mutual: '2', img: 'https://miro.medium.com/max/1200/1*LPPpUZLved9uY_9gvRgRlw.jpeg'},
+  ]
+
+  let FriendsElements = FriendsRequestData.map (friendRequestMassive => {
+    return (
+      <FriendsRequest
+       title={friendRequestMassive.title} 
+      name={friendRequestMassive.name} 
+      mutual={friendRequestMassive.mutual} 
+      img={friendRequestMassive.img}/>
+    )
+  })
+return (
+
+  <aside className={rb.aside} >
+    <div className={rb.sidebar__wrapper}>
+
+{
+  FriendsElements
+}
+      <div className={rb.navblock}>
+        <div className={rb.navblock__title}>
+          <p>Confirm Request</p>
+          <span><Link to="/friends">See all</Link></span>
+        </div>
+
+        <div className={`${rb.rightbar_request} ${rb.rightbar_request_confirm}`}>
+        <div className={`${rb.navblock_avatar} ${rb.nablock_avatar_confirm}`}>
+            <img src="https://p0.pikist.com/photos/719/257/man-model-face-adult-guy-male-person-portrait-handsome.jpg" alt="" />
+          </div>
+          <ul className={rb.rightbar_list}>
+            <li className={rb.rightbar_name}>
+              <p>Valeriy Sergeev</p>
+            </li>
+            <li className={rb.rightbar_name}>
+            <span>12 mutual friends</span>
+            </li>
+          </ul>
+        </div>
+        <div className={`${rb.rightbar_request} ${rb.rightbar_request_confirm}`}>
+        <div className={`${rb.navblock_avatar} ${rb.nablock_avatar_confirm}`}>
+            <img src="https://media.krasota.ru/filer_public/fa/ae/faae81fe-0461-4af9-986a-f7249d8fca67/39_rodri_gogurio.jpg" alt="" />
+          </div>
+          <ul className={rb.rightbar_list}>
+            <li className={rb.rightbar_name}>
+              <p>Carl Vangon</p>
+            </li>
+            <li className={rb.rightbar_name}>
+            <span>12 mutual friends</span>
+            </li>
+          </ul>
+        </div>
+        <div className={`${rb.rightbar_request} ${rb.rightbar_request_confirm}`}>
+          <div className={`${rb.navblock_avatar} ${rb.nablock_avatar_confirm}`}>
+            <img src="https://n1s2.hsmedia.ru/1a/51/d1/1a51d131fd1802f579a448dc2b0ebcf9/1565x2348_0xac120003_17871423461627298878.jpg" alt="" />
+          </div>
+          <ul className={rb.rightbar_list}>
+            <li className={rb.rightbar_name}>
+              <p>Stivi Jonson</p>
+            </li>
+            <li className={rb.rightbar_name}>
+            <span>12 mutual friends</span>
+            </li>
+          </ul>
+        </div>
+        
+</div>  {/* navblock confirm */}
 
 </div>
 </aside>
