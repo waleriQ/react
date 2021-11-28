@@ -29,7 +29,7 @@ return (
 )
   };
 
-  let FriendsElements = props.stateData.FriendsRequestData.map (friendRequestMassive => {
+  let FriendsElements = props.FriendsRequestData.map (friendRequestMassive => {
     return (
       <FriendsRequest
        title={friendRequestMassive.title} 

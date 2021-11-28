@@ -9,7 +9,7 @@ let Main = (props) => {
      <div className="main">
        <Story />
        <Post/>
-       <Rightbar FriendsRequestData={props.stateData.FriendsRequestData}/>
+       <Rightbar FriendsRequestData={props.FriendsRequestData}/>
      </div>
 
   );
