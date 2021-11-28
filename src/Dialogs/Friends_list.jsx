@@ -26,8 +26,6 @@ let User = (props) => {
   )
   }
   
-
-
 let Friends_list = (props) => {
 
     let userElements = props.userData.map( userNewMassive =>
@@ -38,8 +36,6 @@ let Friends_list = (props) => {
         img={userNewMassive.img} /> 
       );
     
- 
-
   return (
     <div className="friends">
       <div className="search_friends">

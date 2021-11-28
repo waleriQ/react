@@ -16,6 +16,13 @@ let state = {
     { name: 'Glorya Mitchel', mutual: '4', img: 'https://miro.medium.com/max/9216/0*KEs-jZkVHlcbBEuY' },
     { name: 'Ivelina Campbell', mutual: '2', img: 'https://miro.medium.com/max/1200/1*LPPpUZLved9uY_9gvRgRlw.jpeg' },
   ],
+
+  ConfirmRequestData: [
+    {name: 'Valeriy Sergeev', mutual: '3', img: "https://p0.pikist.com/photos/719/257/man-model-face-adult-guy-male-person-portrait-handsome.jpg" },
+    {name: 'Carl Vangon', mutual: '5', img: "https://media.krasota.ru/filer_public/fa/ae/faae81fe-0461-4af9-986a-f7249d8fca67/39_rodri_gogurio.jpg" },
+    {name: 'Stivi Jonson', mutual: '10', img: "https://n1s2.hsmedia.ru/1a/51/d1/1a51d131fd1802f579a448dc2b0ebcf9/1565x2348_0xac120003_17871423461627298878.jpg" },
+    {name: 'Kazachuk Li', mutual: '2', img: "https://i.pinimg.com/originals/a3/36/94/a3369465766bdb0e5d6947d885de8be0.jpg" },
+  ]
 }
 
 export default state;

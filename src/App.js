@@ -16,7 +16,7 @@ let App = (props) => {
       <SideBar />
       <div className="wrapper_page">
       <Routes>
-        <Route path='/feeds' element={<Main FriendsRequestData={props.stateData.FriendsRequestData} />} />
+        <Route path='/feeds' element={<Main FriendsRequestData={props.stateData.FriendsRequestData} ConfirmRequestData={props.stateData.ConfirmRequestData} />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/dialogs' element={<Dialogs />} />
         <Route path='/friends' element={<Friends_list userData={props.stateData.userData} />} />
