@@ -16,10 +16,10 @@ let App = (props) => {
       <SideBar />
       <div className="wrapper_page">
       <Routes>
-        <Route path='/feeds' element={<Main FriendsRequestData={props.FriendsRequestData}/>} />
+        <Route path='/feeds' element={<Main FriendsRequestData={props.stateData.FriendsRequestData} />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/dialogs' element={<Dialogs />} />
-        <Route path='/friends' element={<Friends_list userData={props.userData} />} />
+        <Route path='/friends' element={<Friends_list userData={props.stateData.userData} />} />
         {/* <Route path='*' element={<Notfoundpage/>} /> */}
       </Routes>
       </div>

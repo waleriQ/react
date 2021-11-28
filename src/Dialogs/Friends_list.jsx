@@ -30,10 +30,12 @@ let User = (props) => {
 
 let Friends_list = (props) => {
 
-
-  
-
-    let userElements = props.userData.map( userNewMassive => <User name={userNewMassive.name} link={userNewMassive.link} id={userNewMassive.id} job={userNewMassive.job} img={userNewMassive.img} /> 
+    let userElements = props.userData.map( userNewMassive =>
+       <User name={userNewMassive.name}
+        link={userNewMassive.link} 
+        id={userNewMassive.id} 
+        job={userNewMassive.job} 
+        img={userNewMassive.img} /> 
       );
     
  

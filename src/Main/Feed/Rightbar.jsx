@@ -7,7 +7,6 @@ let Rightbar = (props) => {
 
   let FriendsRequest = (props) => {
 return (
- 
 <>
   <div className={rb.rightbar_request}>
     <div className={rb.navblock_avatar}>
@@ -30,9 +29,7 @@ return (
 )
   };
 
-
-
-  let FriendsElements = props.FriendsRequestData.map (friendRequestMassive => {
+  let FriendsElements = props.stateData.FriendsRequestData.map (friendRequestMassive => {
     return (
       <FriendsRequest
        title={friendRequestMassive.title} 
@@ -41,7 +38,10 @@ return (
       img={friendRequestMassive.img}/>
     )
   })
-  
+
+
+
+
 return (
 
   <aside className={rb.aside} >
