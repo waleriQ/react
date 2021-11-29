@@ -1,6 +1,7 @@
 .post_wrapper {
   background-color: white;
   margin-top: 2.5rem;
+  border-radius: 1rem;
 }
 .create__post {
   display: flex;
@@ -20,8 +21,11 @@
   padding-left: 1rem;
 }
 .post {
-  height: 11rem;
- 
+  max-height: 10rem;
+  border: .1rem solid gray;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 .post__textarea {
   padding: 0rem 3rem;
@@ -42,20 +46,20 @@
   object-fit: cover;
 }
 .post__textarea::placeholder {
-  border: 1px solid black;
-  border-radius: 1.5rem;
-  padding: 1rem 1rem 7rem 1rem;
-  opacity: 30%;
+font-family: inherit;
+font-size: 1.7rem;
 }
-
-
+.post__textarea:focus {
+  font-size: 1.6rem;
+}
 
 .post__icons {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-padding: 0rem 1rem 2rem 2rem;
+margin-top: 1.5rem;
+padding: 1rem;
 }
 .post__information {
   display: flex;
