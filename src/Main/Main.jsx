@@ -9,9 +9,9 @@ let Main = (props) => {
   return (
      <div className="main">
        <Story />
-       <Post/>
+       <Post addPost={props.addPost}/>
        <Rightbar FriendsRequestData={props.FriendsRequestData} ConfirmRequestData={props.ConfirmRequestData}/>
-       <Feedpost/>
+       <Feedpost addPost={props.addPost} FeedPostsData={props.FeedPostsData}  />
      </div>
 
   );

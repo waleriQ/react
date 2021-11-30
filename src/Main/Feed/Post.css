@@ -20,6 +20,10 @@
   font-weight: 500;
   padding-left: 1rem;
 }
+.create__title button {
+padding: 0.7rem 1rem;
+cursor: pointer;
+}
 .post {
   max-height: 10rem;
   border: .1rem solid gray;

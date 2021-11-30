@@ -1,5 +1,4 @@
-
-
+import {renderEntireTree} from '../render';
 let state = {
 
   FriendsPage : {
@@ -25,8 +24,34 @@ RightbarPage : {
     {name: 'Carl Vangon', mutual: '5', img: "https://media.krasota.ru/filer_public/fa/ae/faae81fe-0461-4af9-986a-f7249d8fca67/39_rodri_gogurio.jpg" },
     {name: 'Stivi Jonson', mutual: '10', img: "https://n1s2.hsmedia.ru/1a/51/d1/1a51d131fd1802f579a448dc2b0ebcf9/1565x2348_0xac120003_17871423461627298878.jpg" },
     {name: 'Kazachuk Li', mutual: '2', img: "https://i.pinimg.com/originals/a3/36/94/a3369465766bdb0e5d6947d885de8be0.jpg" },
-  ],
-}
+  ]
+},
+
+FeedPostsPage : { 
+  FeedPostsData: [
+    {id: 1,
+     img: 'https://klike.net/uploads/posts/2019-10/1570368924_222.jpg',
+     user: 'Surfiya Zakir',
+     time: '22 min ago',
+     content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis eum et laudantium voluptatem! Molestiae repudiandaealiquam ut alias quis vel, saepe, ea architecto necessitatibus earum et delectus. Eum quibusdam cumque nostrum, assumenda eius, nulla saepe voluptas iusto sunt suscipit voluptates.',
+     like: '2.8k',
+     comments: '22',
+    }
+  ]
 }
 
+}
+
+export let addPost = (postMessage) => {
+  let NewPost = {
+    id: 5,
+    content: postMessage,
+    like: 0,
+    comments: 0,
+    user: '',
+  };
+
+  state.FeedPostsPage.FeedPostsData.push(NewPost)
+  renderEntireTree (state);
+}
 export default state;
