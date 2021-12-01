@@ -1,6 +1,7 @@
 let renderEntireTree = () => {
 
 }
+
 let state = {
 
   FriendsPage : {
@@ -51,6 +52,7 @@ export const addPost = (postMessage) => {
     like: 0,
     comments: 0,
     user: '',
+    img: '',
   };
 
   state.FeedPostsPage.FeedPostsData.push(NewPost)
