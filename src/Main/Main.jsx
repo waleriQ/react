@@ -11,7 +11,7 @@ let Main = (props) => {
        <Story />
        <Post addPost={props.addPost}/>
        <Rightbar FriendsRequestData={props.FriendsRequestData} ConfirmRequestData={props.ConfirmRequestData}/>
-       <Feedpost addPost={props.addPost} FeedPostsData={props.FeedPostsData}  />
+       <Feedpost  FeedPostsData={props.FeedPostsData}  />
      </div>
 
   );

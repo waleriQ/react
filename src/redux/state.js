@@ -1,4 +1,6 @@
-import {renderEntireTree} from '../render';
+let renderEntireTree = () => {
+
+}
 let state = {
 
   FriendsPage : {
@@ -42,7 +44,7 @@ FeedPostsPage : {
 
 }
 
-export let addPost = (postMessage) => {
+export const addPost = (postMessage) => {
   let NewPost = {
     id: 5,
     content: postMessage,
@@ -53,5 +55,10 @@ export let addPost = (postMessage) => {
 
   state.FeedPostsPage.FeedPostsData.push(NewPost)
   renderEntireTree (state);
+}
+
+
+export const subscribe = (observer) => {
+  renderEntireTree = observer;
 }
 export default state;
