@@ -14,7 +14,7 @@ let App = (props) => {
     <div className="page">
       <Header />
       <SideBar />
-      <div className="wrapper_page">
+      <div className="wrapper_page ">
       <Routes>
         <Route path='/feeds' element={<Main addPost={props.addPost} FeedPostsData={props.stateData.FeedPostsPage.FeedPostsData} FriendsRequestData={props.stateData.RightbarPage.FriendsRequestData} ConfirmRequestData={props.stateData.RightbarPage.ConfirmRequestData} />} />
         <Route path='/profile' element={<Profile />} />
