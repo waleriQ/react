@@ -1,8 +1,8 @@
 import React from 'react';
 import './Dialogs.css';
 import {Link} from 'react-router-dom';
-
-
+import {updateNewMessageBodyCreater} from '../redux/state'
+import {sendMessageCreater} from '../redux/state'
 
 
 const MessageLeft = (props) =>{
@@ -51,15 +51,22 @@ let userMessageLeft = props.userData.map (userMesaageMassiveLeft =>
       </>
   )
 
-
+let NewMessageBody=props.state.NewMessageBody;
+let onSendMessageClick = () => {
+  props.store.dispatch(sendMessageCreater());
+}
+let onNewMessageChange = (event) => {
+let body = event.target.value;
+props.store.dispatch(updateNewMessageBodyCreater(text))
+}
 return (
 <div className="dialogs">
 {userMessageLeft}
 <div className="dialogs_container">
   <div className="post">
         <form action="/" className="post__form" method="post" >
-        <button className='btn__blue'>Confirm</button>
-          <textarea className="post__textarea" placeholder='Whats on your mind...'>
+        <button onlick={onSendMessageClick} onChange={onNewMessageChange} className='btn__blue'>Confirm</button>
+          <textarea value="NewMessageBody" className="post__textarea" placeholder='Whats on your mind...'>
           </textarea>
           
         </form>

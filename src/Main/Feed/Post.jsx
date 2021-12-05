@@ -1,7 +1,7 @@
 import React from 'react';
 import './Post.css';
 import { Link } from 'react-router-dom';
-import {addPostActionCreater} from '../../redux/state'
+import addPostActionCreater from '../../redux/state';
 
 
 const Postitem = (props) => {

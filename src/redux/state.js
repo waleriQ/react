@@ -79,8 +79,9 @@ let store = {
     else if (action.type === 'SEND_MESSAGE') {
       let messagebody = this._state.DialogsPage.NewMessageBody;
       this._state.DialogsPage.NewMessageBody = '';
-      this._state.DialogsPage.messageData.push({id: 3, name: "Byrom Guittet", message: messagebody,
-        time: "02:38 PM",img: "/images/woman.jpeg"})
+      this._state.DialogsPage.messageData.push(
+        {id: 3,name: "Byrom Guittet", message = messagebody,
+        time: "02:38 PM",img: "/images/woman.jpeg",})
 
       this._renderEntireTree(this._state )
     }
@@ -90,7 +91,12 @@ let store = {
   },
 } //store
 
-export const addPostActionCreater = (text) => ({type: SEND_MESSAGE })
+export const addPostActionCreater = (text) => {
+  return {
+    type: 'ADD-POST'
+  }
+}
+export const sendMessageCreater = () => ({type: SEND_MESSAGE })
 export const updateNewMessageBodyCreater = (text) => {
   return {
     type: 'UPDATE_NEW_MESSAGE_BODY',
