@@ -1,6 +1,8 @@
 import React from 'react';
 import './Post.css';
 import { Link } from 'react-router-dom';
+import {addPostActionCreater} from '../../redux/state'
+
 
 const Postitem = (props) => {
   return (
@@ -18,7 +20,7 @@ let Post = (props) => {
   
   let addPost = () => {
     let text = newPostElement.current.value;
-    props.addPost(text);
+    props.dispatch(addPostActionCreater(text));
   newPostElement.current.value = '';
   }
 

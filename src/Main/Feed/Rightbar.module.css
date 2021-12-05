@@ -91,6 +91,7 @@ align-items: center;
 margin-bottom: 2rem;
 }
 .btn__blue {
+  text-align: right;
   background-color: #185DD6;
   padding: 1rem 2.5rem;
   border: none;

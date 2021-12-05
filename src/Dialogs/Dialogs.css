@@ -1,6 +1,5 @@
 .dialogs {
   width: 100%;
-
   overflow: auto;
 overflow-x: scroll;
   
@@ -63,3 +62,45 @@ height: 100%;
   border-radius: 10px;
   z-index: 1;
 }
+.post__textarea {
+  font-size: 1.7rem;
+}
+.post__textarea::placeholder {
+  font-family: inherit;
+  font-size: 1.7rem;
+  }
+  .post__textarea:focus {
+    font-size: 1.7rem;
+
+  }
+  .dialogs_container {
+    position: absolute;
+    bottom: 0px;
+   width: 80%;
+  }
+  
+  .post {
+    max-height: 10rem;
+    border: .1rem solid gray;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+ 
+
+  }
+
+  .btn__blue {
+    
+    position: absolute;
+    top: 4.1rem;
+    right: 5.5rem;
+    background-color: #185DD6;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 5rem;
+    color:  white;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    scale: none;
+  }

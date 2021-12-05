@@ -2,6 +2,9 @@ import React from 'react';
 import './Dialogs.css';
 import {Link} from 'react-router-dom';
 
+
+
+
 const MessageLeft = (props) =>{
 return (
 <div className="message__left">
@@ -36,21 +39,35 @@ const MessageRight = (props) =>{
   )
   };
 
-
-
 let Dialogs = (props) => {
+let userMessageLeft = props.userData.map (userMesaageMassiveLeft =>
+  <>
+  <MessageLeft id={userMesaageMassiveLeft.id}
+    name={userMesaageMassiveLeft.name}
+    img={userMesaageMassiveLeft.img}
+    time={userMesaageMassiveLeft.time}
+    message={userMesaageMassiveLeft.message} />
+      
+      </>
+  )
+
+
 return (
 <div className="dialogs">
-
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="I'am fine how are you?" />
-<MessageRight name="Olivia Williams" img="/images/woman.jpeg" time="02:38 PM" message="Oscar Wilde’s plays are famous for their witty dialogue." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="We have held a number of meetings, and the dialogue is ongoing." />
-<MessageRight name="Olivia Williams" img="/images/woman.jpeg" time="02:38 PM" message="Oscar Wilde’s plays are famous for their witty dialogue." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="Information dialogues as communicative action in relation to partner modelling and information processing." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="Issues relating to authenticity of dialogues are complex and have been hotly debated." />
-<MessageLeft name="Byrom Guittet" img="/images/man.jpeg" time="02:35 PM" message="Ill-structured problems tend to produce ' dialogues of the deaf' that can defy resolution for long periods." />
-<MessageRight name="Olivia Williams" img="/images/woman.jpeg" time="02:38 PM" message="In such contexts, dialogues on appropriation, inequalities of power, the user and ^ the used are irrelevant.." />
+{userMessageLeft}
+<div className="dialogs_container">
+  <div className="post">
+        <form action="/" className="post__form" method="post" >
+        <button className='btn__blue'>Confirm</button>
+          <textarea className="post__textarea" placeholder='Whats on your mind...'>
+          </textarea>
+          
+        </form>
+      </div>
 </div>
+
+</div>
+
 )
 };
 export default Dialogs;

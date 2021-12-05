@@ -9,7 +9,7 @@ let Main = (props) => {
   return (
      <div className="main">
        <Story />
-       <Post addPost={props.addPost}/>
+       <Post dispatch={props.dispatch}/>
        <Rightbar FriendsRequestData={props.FriendsRequestData} ConfirmRequestData={props.ConfirmRequestData}/>
        <Feedpost  FeedPostsData={props.FeedPostsData}  />
      </div>
